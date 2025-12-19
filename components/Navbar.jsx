@@ -53,7 +53,7 @@ export default function Navbar() {
           </div>
           <div className="leading-tight">
             <div className="text-white font-semibold tracking-wide">
-              Naash Platform
+               Valentina's Platform
             </div>
             <div className="text-[11px] text-white/60 -mt-0.5">
               Premium service marketplace

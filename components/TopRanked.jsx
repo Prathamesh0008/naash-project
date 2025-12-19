@@ -7,7 +7,7 @@ export default function TopRanked({ creators }) {
   const top = [...creators].sort((a, b) => a.rank - b.rank).slice(0, 5);
 
   return (
-    <section className="max-w-7xl mx-auto px-4 -mt-10 relative z-10">
+    <section className="max-w-7xl mx-auto px-4  relative z-10">
       <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-md overflow-hidden">
         
         {/* HEADER */}

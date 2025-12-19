@@ -32,7 +32,15 @@ export default function HeroBanner() {
     setIndex((i) => (i + 1) % featured.length);
 
   return (
-    <section className="relative w-full h-[calc(100vh-72px)] overflow-hidden">
+   <section
+  className="
+    relative w-full overflow-hidden
+    min-h-[70svh]
+    md:min-h-[calc(100svh-72px)]
+  "
+>
+
+
       {/* BACKGROUND IMAGES */}
       {featured.map((c, i) => (
         <div
@@ -47,7 +55,7 @@ export default function HeroBanner() {
               alt={c.name}
               fill
               priority={i === index}
-              className="object-cover"
+              className="object-contain"
             />
           ) : (
             <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-600" />
@@ -61,7 +69,23 @@ export default function HeroBanner() {
 
       {/* CONTENT */}
       {active && (
-        <div className="relative pt-100 z-10 h-full max-w-7xl mx-auto px-6 flex items-center">
+       <div
+  className="
+    relative z-10
+    max-w-7xl mx-auto px-6
+    pt-24 pb-16
+
+    md:absolute
+    md:left-0
+    md:right-0
+    md:bottom-0
+    md:pb-28
+  "
+>
+
+
+
+
           <div className="max-w-2xl text-white">
             {/* BADGES */}
             <div className="flex items-center gap-3 mb-4">
@@ -115,15 +139,21 @@ export default function HeroBanner() {
             </div>
 
             {/* ACTIONS */}
-            <div className="mt-8 flex gap-4">
-              <button className="px-8 py-3 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 font-semibold shadow-lg transition">
-                Unlock Full Profile
-              </button>
+           <div className="mt-8 flex flex-col sm:flex-row gap-4 w-full">
+  <button className="w-full sm:w-auto px-8 py-3 rounded-xl
+                     bg-gradient-to-r from-pink-600 to-purple-600
+                     hover:from-pink-700 hover:to-purple-700
+                     font-semibold shadow-lg transition">
+    Unlock Full Profile
+  </button>
 
-              <button className="px-8 py-3 rounded-xl bg-white text-gray-900 font-semibold hover:bg-gray-100 transition">
-                Private Message
-              </button>
-            </div>
+  <button className="w-full sm:w-auto px-8 py-3 rounded-xl
+                     bg-white text-gray-900 font-semibold
+                     hover:bg-gray-100 transition">
+    Private Message
+  </button>
+</div>
+
           </div>
         </div>
       )}
