@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import ProviderFilters from "@/components/ProviderFilters";
-import ProviderGrid from "@/components/ProviderGrid";
-import { creators } from "@/data/creators";
+import ProviderFilters from "../../components/ProviderFilters";
+import ProviderGrid from "../../components/ProviderGrid";
+import { creators } from "../../data/creators";
 
 export default function ProvidersPage() {
   const [filters, setFilters] = useState({
